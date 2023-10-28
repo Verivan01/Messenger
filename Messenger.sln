@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientMessenger", "ClientMessenger\ClientMessenger.csproj", "{4D3A6456-8B0F-4BD1-8274-B38A1056D986}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerMessenger", "ServerMessenger\ServerMessenger.csproj", "{2AE3AE76-29AC-4055-AD3D-DC8259311DED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D3A6456-8B0F-4BD1-8274-B38A1056D986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D3A6456-8B0F-4BD1-8274-B38A1056D986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D3A6456-8B0F-4BD1-8274-B38A1056D986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D3A6456-8B0F-4BD1-8274-B38A1056D986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE3AE76-29AC-4055-AD3D-DC8259311DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE3AE76-29AC-4055-AD3D-DC8259311DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE3AE76-29AC-4055-AD3D-DC8259311DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE3AE76-29AC-4055-AD3D-DC8259311DED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F1A8F1C-3667-4802-B565-553E5E5C688F}
+	EndGlobalSection
+EndGlobal
