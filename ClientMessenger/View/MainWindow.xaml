@@ -3,10 +3,92 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ClientMessenger"
+        xmlns:local="clr-namespace:ClientMessenger" 
+        xmlns:viewmodel="clr-namespace:ClientMessenger.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Messenger" Height="700" Width="1300"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        Background="#36393F"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <viewmodel:MainViewModel/>
+    </Window.DataContext>
+        
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  />
+            <ColumnDefinition Width="180"/>
+        </Grid.ColumnDefinitions>
+        
+
+        <Border Grid.Column="0" 
+                Grid.Row="0"   
+                Grid.ColumnSpan="2"
+                Background="#242525">
+            <Grid>
+                <Label Content="Messenger"
+                       Foreground="DarkGray"
+                       FontWeight="Bold">
+                    
+                </Label>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Width="25" 
+                            Height="25" 
+                            Background="Transparent"
+                            Foreground="CornflowerBlue"
+                            Content="_"
+                            BorderThickness="0"
+                            />
+                    <Button Width="25" 
+                            Height="25" 
+                            Background="Transparent"
+                            Foreground="CornflowerBlue"
+                            Content="O"
+                            BorderThickness="0"
+                            />
+                    <Button Width="25" 
+                            Height="25" 
+                            Background="Transparent"
+                            Foreground="CornflowerBlue"
+                            Content="X"
+                            BorderThickness="0"
+                            />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="1" 
+              Grid.Column="1" 
+              Background="#252529">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Users"
+                       Foreground="BlueViolet"
+                       FontWeight="Medium"
+                   FontSize="25"
+                   Margin="15,0,0,0">
+
+            </Label>
+
+            <ListView Background="Transparent"
+                      Grid.Row="1"
+                      ItemsSource="{Binding Users}"
+                      BorderThickness="0"
+                      ItemContainerStyle="{StaticResource UserStyle}"/>
+
+        </Grid>
+
 
     </Grid>
 </Window>

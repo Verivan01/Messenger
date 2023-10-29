@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="ListViewItem" x:Key="UserStyle">
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="Azure"/>
+            </Trigger>
+        </Style.Triggers>
+        <Setter Property="Background" Value="Black" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListViewItem">
+                    <Border Height="40"
+                            Margin="10,3,10,3">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Margin="5,5,5,5" 
+                                    Background="Coral"
+                                    Height="25"
+                                    Width="25">
+                                
+                            </Border>
+                            <Label Content="{Binding Name}"
+                                   Foreground="Gray"
+                                   FontSize="15"/>
+                        </StackPanel>
+                        
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>

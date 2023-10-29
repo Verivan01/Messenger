@@ -9,8 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Infrastructure\" />
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
+    <Folder Include="Image\" />
   </ItemGroup>
 
 </Project>
