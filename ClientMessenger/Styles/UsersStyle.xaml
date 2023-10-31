@@ -3,24 +3,26 @@
     <Style TargetType="ListViewItem" x:Key="UserStyle">
         <Style.Triggers>
             <Trigger Property="IsSelected" Value="True">
-                <Setter Property="Background" Value="Azure"/>
+                <Setter Property="Background" Value="DarkGray"/>
             </Trigger>
+            
         </Style.Triggers>
-        <Setter Property="Background" Value="Black" />
+        <Setter Property="Background" Value="#393B40" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListViewItem">
                     <Border Height="40"
-                            Margin="10,3,10,3">
+                            Margin="10,3,10,3"
+                            Background="{TemplateBinding Background}">
                         <StackPanel Orientation="Horizontal">
                             <Border Margin="5,5,5,5" 
-                                    Background="Coral"
+                                    Background="Silver"
                                     Height="25"
                                     Width="25">
                                 
                             </Border>
                             <Label Content="{Binding Name}"
-                                   Foreground="Gray"
+                                   Foreground="CornflowerBlue"
                                    FontSize="15"/>
                         </StackPanel>
                         

@@ -31,7 +31,8 @@
         <Border Grid.Column="0" 
                 Grid.Row="0"   
                 Grid.ColumnSpan="2"
-                Background="#242525">
+                Background="#242525"
+                MouseDown="BorderMousDown">
             <Grid>
                 <Label Content="Messenger"
                        Foreground="DarkGray"
@@ -59,6 +60,7 @@
                             Foreground="CornflowerBlue"
                             Content="X"
                             BorderThickness="0"
+                            Click="ButtonClose_Click"
                             />
                 </StackPanel>
             </Grid>
@@ -74,7 +76,7 @@
             </Grid.RowDefinitions>
 
             <Label Content="Users"
-                       Foreground="BlueViolet"
+                       Foreground="Gray"
                        FontWeight="Medium"
                    FontSize="25"
                    Margin="15,0,0,0">
@@ -85,8 +87,35 @@
                       Grid.Row="1"
                       ItemsSource="{Binding Users}"
                       BorderThickness="0"
+                      
                       ItemContainerStyle="{StaticResource UserStyle}"/>
 
+        </Grid>
+
+        <Grid Grid.Row="1"
+              Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="11*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Margin="5"
+                        Grid.Row="1"
+                        Orientation="Horizontal"
+                        >
+                <TextBox Margin="3,3,3,3" 
+                         Width="1000"
+                         Background="Gray">
+                    
+                </TextBox>
+
+                <Button Width="90"
+                        Margin="7,3,3,3" Background="Transparent">
+                    
+
+                </Button>
+
+            </StackPanel>
         </Grid>
 
 

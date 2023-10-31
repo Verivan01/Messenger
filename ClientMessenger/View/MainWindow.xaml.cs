@@ -24,5 +24,18 @@ namespace ClientMessenger
         {
             InitializeComponent();
         }
+
+        private void BorderMousDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.LeftButton== MouseButtonState.Pressed) 
+            {
+                DragMove();
+            }
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
